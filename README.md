@@ -11,6 +11,28 @@ taro中rn框架的目的是对标小程序的某些功能，使用的是expo这�
 我们只要确保在taro项目中编译出来的rn项目在我们的原生项目中跑起来即可，也就是要使用我们自己实现的expo中的某些原生功能来替换掉原来的内容即可，这些功能非必要，只是让原先的项目跑起来，这样也可以起到减小项目体积的作用。
 
 
+## 需要做什么?
+
+对于原来的taro项目
+
+```
+npm run dev:rn
+```
+
+注意保留rn的cmd窗口,原生模块使用的是这里创建的服务窗口。
+
+而对于shell项目
+```
+git clone https://github.com/jzoom/taro-shell
+```
+
+编译原生项目运行即可,不必使用这里的node_module
+
+
+![](img/android.jpg)
+
+![](img/ios.png)
+
 ## 附录
 
 ios编译问题
