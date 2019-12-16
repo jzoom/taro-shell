@@ -29,9 +29,66 @@ git clone https://github.com/jzoom/taro-shell
 编译原生项目运行即可,不必使用这里的node_module
 
 
+修改下原生项目中的加载模块名称，务必和这里的保持一致
+
+![](img/name.png)
+
+
+rn_temp/app.json中的显示的名字
+
+android:
+
+```
+
+public class MainActivity extends ReactActivity {
+
+    /**
+     * Returns the name of the main component registered from JavaScript.
+     * This is used to schedule rendering of the component.
+     */
+    @Override
+    protected String getMainComponentName() {
+        return "businessMini"; //保持一致
+    }
+}
+
+```
+
+
+ios
+
+
+```
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+  NSURL *jsCodeLocation;
+
+  jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"rn_temp/index" fallbackResource:nil];
+
+  RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
+                                                      moduleName:@"businessMini" //保持一致
+                                               initialProperties:nil
+                                                   launchOptions:launchOptions];
+  rootView.backgroundColor = [[UIColor alloc] initWithRed:1.0f green:1.0f blue:1.0f alpha:1];
+
+  self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+  UIViewController *rootViewController = [UIViewController new];
+  rootViewController.view = rootView;
+  self.window.rootViewController = rootViewController;
+  [self.window makeKeyAndVisible];
+  return YES;
+}
+
+```
+
+
+
 ![](img/android.jpg)
 
 ![](img/ios.png)
+
+
 
 ## 附录
 
