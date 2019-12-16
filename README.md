@@ -11,5 +11,20 @@ taro中rn框架的目的是对标小程序的某些功能，使用的是expo这�
 我们只要确保在taro项目中编译出来的rn项目在我们的原生项目中跑起来即可，也就是要使用我们自己实现的expo中的某些原生功能来替换掉原来的内容即可，这些功能非必要，只是让原先的项目跑起来，这样也可以起到减小项目体积的作用。
 
 
+## 附录
+
+ios编译问题
+
+找不到"config.h"
+
+https://www.jianshu.com/p/e51d5fabdf7e
+
+"Unknown argument type '__attribute__' in method -[RCTAppState getCurrentAppState:error:]. Extend RCTConvert to support this type."
+
+https://www.cnblogs.com/wtfu/p/11598566.html
+
+
+
+
 
 
