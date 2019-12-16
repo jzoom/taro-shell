@@ -22,13 +22,14 @@ public class MainApplication extends Application implements ReactApplication {
     @Override
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
-          new MainReactPackage()
+          new MainReactPackage(),
+              new NativeUnimoduleReactPackage()
       );
     }
 
     @Override
     protected String getJSMainModuleName() {
-      return "index";
+      return "rn_temp/index";
     }
   };
 
